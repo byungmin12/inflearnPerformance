@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45d8b72a-f306-4b21-b4d7-e28f8d9a07e3" name="Changes" comment="clone setting">
+    <list default="true" id="45d8b72a-f306-4b21-b4d7-e28f8d9a07e3" name="Changes" comment="코드 스필릿 &amp; 레이지 로딩 &#10;&#10;리액트 &#10;파일이 무거울 때 사용하지 않는 곳에서 그 파일을 불러오면 렌더링 속도가 늦어질 수 있다. 이를 방지하기 위해 사용하지 않는 파일은 React.lazy와 React.Suspense를 사용하여 초기에 한번에 가지고 오는 것이 아닌 사용될 때만 파일을 가지고 오는 것이다. &#10;&#10;next에서는 이와 비슷한 방법으로 Dynamic import 가 존재한다. &#10;&#10;* 파일을 서버로부터 가지고 오기 전까지 화면상에 보여줘야하기 때문에 Suspense 등에 대한 처리가 필요하다.">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Article/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Article/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -27,22 +31,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/gimbyeongmin/Desktop/inflearn/performance/performanceCh_1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gimbyeongmin/Desktop/inflearn/performance/performanceCh_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,7 +55,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659533521019</updated>
-      <workItem from="1659533522212" duration="1662000" />
+      <workItem from="1659533522212" duration="2418000" />
+      <workItem from="1659696643406" duration="2782000" />
     </task>
     <task id="LOCAL-00001" summary="clone setting">
       <created>1659533678667</created>
@@ -60,7 +65,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659533678667</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="index.js &#10;&#10;이미지를 최적화하는 것이 웹페이지의 성능에 많은 영향을 끼침 . 그 말은 이미지를 잘 할 수록 웹 페이지가 가볍고 빨라진다는 것&#10;&#10;만약 자체적인 서버를 가지고 있다면 이미지 크기를 화면에서 보여줄 크기의 1/2 혹은 70-80퍼센트로 처리한 뒤 프론트에 넘겨주면 됨&#10;&#10;하지만 서버에서 보내주는 url이 아닌 다른 회사의 url을 사용하는 것이라면 cdn이나 imgIX같은 cdn을 사용하여 이미지를 사전에 처리해줄 수 있음 &#10;(next는 Image태그를 사용하요 이미지 최적화를 보다 쉽게 처리할 수 있다.)">
+      <created>1659536272465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659536272465</updated>
+    </task>
+    <task id="LOCAL-00003" summary="코드 스필릿 &amp; 레이지 로딩 &#10;&#10;리액트 &#10;파일이 무거울 때 사용하지 않는 곳에서 그 파일을 불러오면 렌더링 속도가 늦어질 수 있다. 이를 방지하기 위해 사용하지 않는 파일은 React.lazy와 React.Suspense를 사용하여 초기에 한번에 가지고 오는 것이 아닌 사용될 때만 파일을 가지고 오는 것이다. &#10;&#10;next에서는 이와 비슷한 방법으로 Dynamic import 가 존재한다. &#10;&#10;* 파일을 서버로부터 가지고 오기 전까지 화면상에 보여줘야하기 때문에 Suspense 등에 대한 처리가 필요하다.">
+      <created>1659699426615</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699426615</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clone setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="clone setting" />
+    <MESSAGE value="index.js &#10;&#10;이미지를 최적화하는 것이 웹페이지의 성능에 많은 영향을 끼침 . 그 말은 이미지를 잘 할 수록 웹 페이지가 가볍고 빨라진다는 것&#10;&#10;만약 자체적인 서버를 가지고 있다면 이미지 크기를 화면에서 보여줄 크기의 1/2 혹은 70-80퍼센트로 처리한 뒤 프론트에 넘겨주면 됨&#10;&#10;하지만 서버에서 보내주는 url이 아닌 다른 회사의 url을 사용하는 것이라면 cdn이나 imgIX같은 cdn을 사용하여 이미지를 사전에 처리해줄 수 있음 &#10;(next는 Image태그를 사용하요 이미지 최적화를 보다 쉽게 처리할 수 있다.)" />
+    <MESSAGE value="코드 스필릿 &amp; 레이지 로딩 &#10;&#10;리액트 &#10;파일이 무거울 때 사용하지 않는 곳에서 그 파일을 불러오면 렌더링 속도가 늦어질 수 있다. 이를 방지하기 위해 사용하지 않는 파일은 React.lazy와 React.Suspense를 사용하여 초기에 한번에 가지고 오는 것이 아닌 사용될 때만 파일을 가지고 오는 것이다. &#10;&#10;next에서는 이와 비슷한 방법으로 Dynamic import 가 존재한다. &#10;&#10;* 파일을 서버로부터 가지고 오기 전까지 화면상에 보여줘야하기 때문에 Suspense 등에 대한 처리가 필요하다." />
+    <option name="LAST_COMMIT_MESSAGE" value="코드 스필릿 &amp; 레이지 로딩 &#10;&#10;리액트 &#10;파일이 무거울 때 사용하지 않는 곳에서 그 파일을 불러오면 렌더링 속도가 늦어질 수 있다. 이를 방지하기 위해 사용하지 않는 파일은 React.lazy와 React.Suspense를 사용하여 초기에 한번에 가지고 오는 것이 아닌 사용될 때만 파일을 가지고 오는 것이다. &#10;&#10;next에서는 이와 비슷한 방법으로 Dynamic import 가 존재한다. &#10;&#10;* 파일을 서버로부터 가지고 오기 전까지 화면상에 보여줘야하기 때문에 Suspense 등에 대한 처리가 필요하다." />
   </component>
 </project>
