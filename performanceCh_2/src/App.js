@@ -4,7 +4,9 @@ import Header from './components/Header'
 import InfoTable from './components/InfoTable'
 import SurveyChart from './components/SurveyChart'
 import Footer from './components/Footer'
-import ImageModal from './components/ImageModal'
+// import ImageModal from './components/ImageModal'
+
+const LazyImageModel = React.lazy(()=>import('./components/ImageModal'))
 
 function App() {
     const [showModal, setShowModal] = useState(false)
@@ -16,7 +18,9 @@ function App() {
             <ButtonModal onClick={() => { setShowModal(true) }}>올림픽 사진 보기</ButtonModal>
             <SurveyChart />
             <Footer />
-            {showModal ? <ImageModal closeModal={() => { setShowModal(false) }} /> : null}
+            <React.Suspense fallback={null}>
+            {showModal ? <LazyImageModel closeModal={() => { setShowModal(false) }} /> : null}
+            </React.Suspense>
         </div>
     )
 }
