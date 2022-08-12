@@ -37,3 +37,25 @@ S
 #.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 9
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
+O
+src/templates/BasicTemplates.js,9/6/96136b503362373e6b6937a982f3002b264f02f0
+L
+src/pages/ListPage/index.css,a/d/adb141784bf7d012e2f0081b8b83e6c913c4b72d
+K
+src/pages/ListPage/index.js,c/f/cfd289b222ed9d037b117e2b9089a3683bb39785
+S
+#src/components/ArticleList/index.js,b/1/b1d155fb441bd1bc546e1cb117c59676ca788b0d
+O
+src/components/Article/index.js,d/4/d495ae8461cf85154a4a7d914875727764de1132
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+:
+
+src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
