@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d10333-7c37-4819-b0f7-867e4837ee23" name="Changes" comment="lazyload의 단점&#10;클릭 한 순간 모달 파일을 가지고 오고 이를 그려서 화면에 보여줌 이게 최초페이지만 로딩이 빨라지고 모달 자체는 느려진거임 그래서 클릭이 되기 전에 모달 파일을 로드 시켜줘야함&#10;방법 두가지 !&#10;&#10;Line: 16 &#10;마우스가 버튼위에 올려졌을때 모달 파일을 가지고 오는 방법&#10;&#10;Line: 13&#10;중요한 모든 파일을 가지고 온 뒤에 모달 파일을 가지고 오는 방법 &#10;&#10;Line: 9 &#10;보일러 템플릿을 없애기 위한 방법">
-      <change beforePath="$PROJECT_DIR$/../performanceCh_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,22 +31,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/gimbyeongmin/Desktop/inflearn/performance/performanceCh_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gimbyeongmin/Desktop/inflearn/performance/performanceCh_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659847626437</updated>
       <workItem from="1659847627613" duration="3907000" />
+      <workItem from="1660288450637" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="브라우저가 렌더링되는 과정&#10;1.돔트리 + cssom을 만듬&#10; html을 가공하여 돔트리 &#10; css를 가공하여 cssom을 만듬&#10;2.만든것을 통해 렌더 트리 구성&#10;3.레이아웃 구성 &#10; 위치와 크기를 계산하여 레이아웃을 잡음&#10;4.페인트&#10; 만들어진 레이아웃을 바탕으로 색을 채움 &#10;5. 콤포짓&#10; 각 레이어를 합성하여 최종적인 화면을 구성&#10; &#10;이렇게 완성된 화면에서 변화가 생기면 위 과정을 반복함. &#10; &#10; 애니메이션을 반복하게 된다면 위 과정을 반복(리플로우)하기에 버벅이는 문제가 발생함 &#10; (화면에 그려지는데 최소 60프레임 필요&#10; )&#10; &#10;layout + paint = reflow &#10;paint = repaint &#10;&#10;이 때 reflow나 repaint를 피할 수 있는 방법은 GPU의 도움으면 피할 수 있음&#10;&#10;- GPU의 도움 ?&#10;GPU의 도움을 받을 수 있는 방법은 뭐가 있을까? &#10;&#10;바로 GPU가 관여할 수 있는 속성을 변경하는 것이다. &#10;ex) transform, opacity">
       <created>1659849283448</created>
