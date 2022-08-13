@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d10333-7c37-4819-b0f7-867e4837ee23" name="Changes" comment="lazyload의 단점&#10;클릭 한 순간 모달 파일을 가지고 오고 이를 그려서 화면에 보여줌 이게 최초페이지만 로딩이 빨라지고 모달 자체는 느려진거임 그래서 클릭이 되기 전에 모달 파일을 로드 시켜줘야함&#10;방법 두가지 !&#10;&#10;Line: 16 &#10;마우스가 버튼위에 올려졌을때 모달 파일을 가지고 오는 방법&#10;&#10;Line: 13&#10;중요한 모든 파일을 가지고 온 뒤에 모달 파일을 가지고 오는 방법 &#10;&#10;Line: 9 &#10;보일러 템플릿을 없애기 위한 방법">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performanceCh_3/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_3/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performanceCh_3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performanceCh_3/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_3/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../performanceCh_3/src/components/BannerVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_3/src/components/BannerVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performanceCh_3/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../performanceCh_3/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
