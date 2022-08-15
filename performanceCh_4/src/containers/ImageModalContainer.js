@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 import ImageModal from '../components/ImageModal';
 
 function ImageModalContainer() {
@@ -8,7 +8,7 @@ function ImageModalContainer() {
     bgColor: state.imageModal.bgColor,
     src: state.imageModal.src,
     alt: state.imageModal.alt,
-  }));
+  }), shallowEqual);
 
   return (
     <ImageModal
