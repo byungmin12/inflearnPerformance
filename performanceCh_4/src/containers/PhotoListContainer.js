@@ -16,9 +16,11 @@ function PhotoListContainer() {
     loading: state.photos.loading,
   }),shallowEqual);
 
-  const filteredPhotos = category==="all" ? photos : photos.filter(
-    photo => photo.category === category
-  )
+  const filteredPhotos = React.useMemo(() => {
+    return category==="all" ? photos : photos.filter(
+      photo => photo.category === category
+    )
+  }, [photos,category]);
 
   if (loading === 'error') {
     return <span>Error!</span>;
